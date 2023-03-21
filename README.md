@@ -1,5 +1,17 @@
 # Binning in MPI and Cuda
 
+ ## 1. (50)Develop a parallel histogramming program using C/C++ and MPI. 
+ A histogram is used to summarize the distribution of data values in a data set. The most common form of histogramming splits the data range into equal-sized bins called classes. For each bin, the number of data values in the data set that fall into that class are totaled. Your input to this program will be integers in the range 1-1000 (use a random number generator). Your input data set should contain N integers, where N can be varied.
+Perform binning on each node using MPI, and then perform a reduction on node 0 to combine your partial results. Run this on 4 and 8 nodes on Discovery. Your program should print out the values that fell into each class, in ascending class order.
+a. For your binning, use each node to produce a histogram for (1/#classes)th of the input data values. Experiment with varying the number of classes and different values for N, and plot your performance results.
+b. For your binning, use each node to only produce values for a single class of the input data values. Experiment with varying the number of classes and different values for N, and plot your performance results.
+c. Compare the performance results for a and b, and attempt to explain any differences.
+*Answers to this question should be included in your homework write-up in pdf format, should include a C program submitted on Blackboard, and submitted through Turnitin.
+
+## 2. (30) Develop a parallel CUDA program to implement part 
+a.) in Problem 1. Run on a single GPU.
+a. Compare the performance of your CUDA implementation with your MPI implementation.
+*Answers to this question should be included in your homework write-up in pdf format, should include a C program submitted on Blackboard, and submitted through Turnitin.
 ## Method A
 
 ### 4 Node Variable Clases
